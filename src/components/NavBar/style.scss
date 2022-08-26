@@ -1,0 +1,53 @@
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 80px;
+  padding: 20px;
+  background-color: aquamarine;
+  font-size: 2rem;
+
+  .logo {
+    width: 320px;
+  }
+
+  .navbarContainer {
+    width: 320px;
+
+    ul {
+      display: flex;
+      gap: 15px;
+
+      li {
+        transition: transform 0.2s ease;
+
+        &:hover {
+          transform: scale(1.1);
+          }        
+       }
+     }
+  }
+
+  .carritoContainer {
+    width: 320px;
+    text-align: end;
+    font-size: 2.5rem;
+    transition: transform 0.3 ease;
+
+    a i:hover {
+      transform: scale(1.1);
+     }
+   }
+}
+
+
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 

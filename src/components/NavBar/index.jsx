@@ -1,5 +1,5 @@
 import React from 'react'
-import './style.css'
+import './style.scss'
 
 const NavBar = () => {
   return (
@@ -16,7 +16,7 @@ const NavBar = () => {
         </ul>
       </nav>
       <div className='carritoContainer'>
-        <a href=" "><i class="fa-solid fa-cart-shopping"></i></a>
+        <a href="/#"><i class="fa-solid fa-cart-shopping"></i></a>
       </div>
     </header>
   )
