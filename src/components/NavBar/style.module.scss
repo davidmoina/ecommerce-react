@@ -1,3 +1,5 @@
+@use '../../scss/abstracts/variables' as var;
+
 .header {
   display: flex;
   justify-content: space-between;
@@ -5,7 +7,7 @@
   height: 80px;
   padding: 20px;
   background-color: aquamarine;
-  font-size: 2rem;
+  font-size: var.$font-size-md;
 
   .logo {
     width: 320px;
@@ -32,11 +34,16 @@
     width: 320px;
     text-align: end;
     font-size: 2.5rem;
-    transition: transform 0.3 ease;
 
-    a i:hover {
+    a {
+      display: inline-block;
+    transition: transform 0.3 ease;
+    
+    &:hover {
       transform: scale(1.1);
      }
+    }
+
    }
 }
 

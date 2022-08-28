@@ -1,16 +1,14 @@
-import './App.scss';
-import NavBar from './components/NavBar'; 
+import "./App.scss";
+import NavBar from "./components/NavBar";
+import ItemListContainer from "./containers/ItemListContainer";
 
 function App() {
   return (
     <>
-      <NavBar/>
-      <div className="App">
-
-      </div>
+      <NavBar />
+      <ItemListContainer greeting={"Hola! Bienvenido a mi primera app con react!"}/>
     </>
   );
 }
 
 export default App;
-

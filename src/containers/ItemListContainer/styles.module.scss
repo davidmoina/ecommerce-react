@@ -1,0 +1,6 @@
+@use '../../scss/abstracts/variables' as var;
+
+h2 {
+  display: inline-block;
+  font-size: var.$font-size-xl;
+}

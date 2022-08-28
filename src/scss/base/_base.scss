@@ -1,4 +1,6 @@
+@use '../abstracts/variables' as var;
+
 html, body {
-  font-family: var(--fuente-principal);
+  font-family: var.$fuente-principal;
   font-size: 62.5%;
 }
