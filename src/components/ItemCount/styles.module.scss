@@ -1,0 +1,60 @@
+@use '../../scss/abstracts/variables' as var;
+
+.cardContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  font-size: var.$font-size-xl;
+  width: 250px;
+  height: 350px;
+  border: 1px solid black;
+  border-radius: 10px;
+  box-shadow: 0 2px 5px rgb(0 0 0 / 50%);
+  overflow: hidden;
+
+  .cardImage {
+    height: 60%;
+  }
+
+
+  .cardBody {
+    height: 40%;
+    display: grid; 
+    grid-template-columns: 1fr 1fr ; 
+    grid-template-rows: 30px 1fr 1fr; 
+    gap: 0px 0px; 
+    grid-template-areas: 
+      "titleProduct titleProduct"
+      "price addButttons"
+      "addCartButton addCartButton";
+  }
+
+  .titleProduct { 
+    grid-area: titleProduct;
+    justify-self: center;
+    align-self: center;
+  }
+  .price { 
+    grid-area: price;
+    align-self: center;
+    justify-self: center;
+
+  }
+  .addButtons { 
+    grid-area: addButttons;
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-evenly;
+    align-items: center;
+
+    .buttons {
+      width: 20px;
+    }
+  }
+  .addCartButton { 
+    grid-area: addCartButton; 
+  }
+
+  
+}
+
