@@ -10,7 +10,7 @@ const ItemCount = ({stock, initial, onAdd}) => {
     if(add < stock) {
       setAdd(add + 1);
     } else {
-      alert("No hay stock suficiente");
+      alert("No tenemos stock suficiente");
     }
   }
 
@@ -28,19 +28,14 @@ const ItemCount = ({stock, initial, onAdd}) => {
   }
 
   return (
-    <div className={styles.cardContainer}>
-      <img className={styles.cardImage} src="" alt="" />
-      <div className={styles.cardBody}>
-        <h5 className={styles.titleProduct}>Producto 1</h5>
-        <p className={styles.price}>20€</p>
-        <div className={styles.addButtons}>
-          <button className={styles.buttons} onClick={sumProduct}>+</button>
-          <p>{add}</p>
-          <button className={styles.buttons} onClick={restProduct}>-</button>
-        </div>
-        <button className={styles.addCartButton} onClick={addCart}>Agregar al carrito</button>
+    <>
+      <div className={styles.addButtons}>
+        <button className={styles.buttons} onClick={sumProduct}>+</button>
+        <p>{add}</p>
+        <button className={styles.buttons} onClick={restProduct}>-</button>
       </div>
-  </div>
+      <button className={styles.addCartButton} onClick={addCart}>Agregar al carrito</button>
+    </>
   )
 }
 
