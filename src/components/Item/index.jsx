@@ -9,9 +9,10 @@ const Item = ({product}) => {
     alert(`Se agrego la cantidad ${cantidad} al carrito`);
   };
 
+  //por cada producto aqui devolvemos un Item
   return (
     <div className={styles.cardContainer}>
-      <img className={styles.cardImage} src="" alt="" />
+      <img className={styles.cardImage} src={product.images} width="100%" alt="" />
       <div className={styles.cardBody}>
         <h5 className={styles.titleProduct}>{product.name}</h5>
         <p className={styles.price}>{product.price}€</p>

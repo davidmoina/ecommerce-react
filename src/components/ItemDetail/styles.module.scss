@@ -1,0 +1,47 @@
+@use '../../scss/abstracts/variables' as var;
+
+.container {  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr 1fr;
+  grid-auto-columns: 1fr 1fr 1fr 1fr;
+  grid-auto-rows: 1fr;
+  gap: 0px 0px;
+  grid-auto-flow: column;
+  grid-template-areas:
+    "imageContainer imageContainer imageContainer imageContainer detailsContainer detailsContainer"
+    "imageContainer imageContainer imageContainer imageContainer detailsContainer detailsContainer"
+    "imageContainer imageContainer imageContainer imageContainer detailsContainer detailsContainer"
+    "imageContainer imageContainer imageContainer imageContainer detailsContainer detailsContainer";
+
+    .imageContainer { 
+      grid-area: imageContainer;
+      align-self: center;
+      justify-self: center;
+    }
+
+    .detailsContainer { 
+      grid-area: detailsContainer; 
+      display: flex;
+      flex-direction: column;
+      padding: 50px;
+      gap: 30px;
+
+      h3{
+        font-size: var.$font-size-xxl;
+      }
+
+      p{
+        font-size: var.$font-size-md;
+      }
+
+      .countContainer {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+      }
+    }
+}
+
+
+
+
