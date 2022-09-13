@@ -3,17 +3,18 @@
 .cardContainer {
   display: flex;
   flex-direction: column;
-  justify-content: space-evenly;
+  justify-content: space-between;
   font-size: var.$font-size-xl;
-  width: 250px;
-  height: 350px;
+  width: 300px;
+  height: 400px;
   border: 1px solid black;
   border-radius: 10px;
   box-shadow: 0 2px 5px rgb(0 0 0 / 50%);
   overflow: hidden;
 
   .cardImage {
-    height: 60%;
+    height: 220px;
+    object-fit: contain;
   }
 
 

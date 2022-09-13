@@ -17,7 +17,7 @@ const ItemDetail = ({product}) => {
       <div className={styles.detailsContainer}>
         <h3>{product.title}</h3>
         <p>{product.description}.</p>
-        <p>Precio: {product.price}$</p>
+        <p>Precio: {product.price}€</p>
         <div className={styles.countContainer}>
           <ItemCount initial={1} stock={10} onAdd={agregarCarrito}/>
         </div>
