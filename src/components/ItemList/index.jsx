@@ -1,5 +1,4 @@
 import React from 'react';
-import { products } from '../../data/products';
 import Item from '../Item';
 import styles from './styles.module.scss'
 
@@ -13,4 +12,4 @@ const ItemList = ({products}) => {
   )
 }
 
-export default ItemList
+export default ItemList;

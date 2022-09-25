@@ -32,7 +32,7 @@ const NavBar = () => {
           </ul>
         </nav>
         <div className={styles.carritoContainer}>
-          <CartWidget/>
+          <Link to="/cart"><CartWidget/></Link>
         </div>
       </header>
     </>

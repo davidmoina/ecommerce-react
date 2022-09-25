@@ -1,6 +1,7 @@
 @use '../../scss/abstracts/variables' as var;
 
-.container {  display: grid;
+.container {  
+  display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
   grid-template-rows: 1fr 1fr 1fr 1fr;
   gap: 0px 0px;
@@ -10,26 +11,41 @@
     "imageContainer imageContainer imageContainer detailsContainer detailsContainer"
     "imageContainer imageContainer imageContainer detailsContainer detailsContainer"
     "imageContainer imageContainer imageContainer detailsContainer detailsContainer";
+  width: 80%;
+  height: 650px;
+  margin: 50px auto;
 
     .imageContainer { 
+      width: 650px;
       grid-area: imageContainer;
-      align-self: center;
-      justify-self: center;
+      display: flex;
+      justify-content: center;
+      align-content: center;
+      background-color: white;
+      border-radius: 30px;
+      padding: 30px 0;
+      margin: 0 auto;
+
+      img {
+        border-radius: 30px;
+        object-fit: contain;
+      }
     }
 
     .detailsContainer { 
-      grid-area: detailsContainer; 
+      grid-area: detailsContainer;
       display: flex;
       flex-direction: column;
       padding: 50px;
       gap: 30px;
+      background-color: var.$color-claro;
 
       h3{
-        font-size: var.$font-size-xxl;
+        font-size: var.$font-size-xl;
       }
 
       p{
-        font-size: var.$font-size-md;
+        font-size: var.$font-size-sm;
       }
 
       .countContainer {

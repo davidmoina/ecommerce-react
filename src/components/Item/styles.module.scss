@@ -11,10 +11,13 @@
   border-radius: 10px;
   box-shadow: 0 2px 5px rgb(0 0 0 / 50%);
   overflow: hidden;
+  padding: 10px;
+  background-color: white;
 
   .cardImage {
     height: 220px;
     object-fit: contain;
+    background-color: white;
   }
 
 
