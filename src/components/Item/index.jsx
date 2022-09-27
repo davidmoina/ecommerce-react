@@ -6,7 +6,6 @@ import { useNavigate } from 'react-router-dom';
 const Item = ({product}) => {
 
   const agregarCarrito = (cantidad) => {
-    console.log(cantidad);
     alert(`Se agrego la cantidad ${cantidad} al carrito`);
   };
 
@@ -21,8 +20,8 @@ const Item = ({product}) => {
 
   //por cada producto aqui devolvemos un Item
   return (
-    <div className={styles.cardContainer} onClick={handleNavigate}>
-      <img className={styles.cardImage} src={product.image} width="100%" alt="" />
+    <div className={styles.cardContainer}>
+      <img className={styles.cardImage} src={product.image} onClick={handleNavigate} width="100%" alt="" />
       <div className={styles.cardBody}>
         <h6 className={styles.titleProduct}>{product.title}</h6>
         <p className={styles.price}>{product.price}€</p>

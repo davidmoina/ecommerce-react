@@ -15,7 +15,8 @@ const ItemDetail = ({product}) => {
   const {addItem} = useContext(Shop);
 
   const toCart = (quantity) => {
-    setQty(quantity)
+    setQty(quantity);
+    
   }
 
   const handleFinish = () => {
@@ -34,7 +35,9 @@ const ItemDetail = ({product}) => {
         <p>{product.description}.</p>
         <p>Precio: {product.price}€</p>
         <div className={styles.countContainer}>
-          {!qty ? <ItemCount initial={1} stock={10} onAdd={toCart}/> : <button onClick={handleFinish}>Finalizar compra</button>}
+          {!qty 
+          ? <ItemCount initial={1} stock={product.stock} onAdd={toCart}/> 
+          : <button onClick={handleFinish}>Finalizar compra</button>}
         </div>
       </div>
     </div>

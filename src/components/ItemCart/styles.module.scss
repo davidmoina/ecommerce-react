@@ -1,16 +1,15 @@
 @use '../../scss/abstracts/variables' as var;
 
 .cartContent {  display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-columns: 1fr 2.5fr 0.5fr 0.5fr 0.5fr;
   grid-template-rows: 1fr;
-  gap: 0px 0px;
   grid-auto-flow: column;
   grid-template-areas:
-    "productImage title price quantity";
+    "productImage title price quantity button";
 
   align-items: center;
-  align-content: center;
   padding: 2em 1em;
+  margin: 10px;
   border-radius: 10px;
   background-color: var.$color-claro;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
@@ -25,21 +24,58 @@
     border-radius: 20px;
   }
 
+  dl {
+
+    height: 100%;
+    padding: 0 15px;
+    font-size: var.$font-size-sm;
+
+    dt {
+      margin-top: 20px;
+      font-weight: 600;
+    }
+
+    dd {
+      margin-top: 20px;
+      justify-self: center;
+    }
+  }
+
+
   .title { 
     grid-area: title;
-    font-size: var.$font-size-sm;
   }
 
   .price { 
     grid-area: price;
-    font-size: var.$font-size-sm;
     text-align: center;
   }
 
   .quantity { 
     grid-area: quantity;
-    font-size: var.$font-size-sm;
     text-align: center;
+  }
+
+  .button {
+    grid-area: button;
+    justify-self: center;
+    width: 40px;
+    height: 40px;
+    color: #fff;
+    padding: 5px 10px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    position: relative;
+    display: inline-block;
+    outline: none;
+    border-radius: 5px;
+    border: 2px solid #d90429;
+    background: #d90429;
+  }
+  .button:hover {
+    background: #fff;
+    color: #d90429
   }
 }
 

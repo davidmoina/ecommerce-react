@@ -41,8 +41,6 @@ const ItemListContainer = () => {
     })();
 
   }, [categoryId]);
-  
-  console.log(productos)
 
   //retornamos los productos en itemList
   return (

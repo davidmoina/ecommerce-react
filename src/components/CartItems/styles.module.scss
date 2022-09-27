@@ -1,0 +1,39 @@
+@use '../../scss/abstracts/variables' as var;
+
+.cartContent { 
+  grid-area: cartContent;
+  width: 100%;
+  background-color: white;
+  border-radius: 10px;
+
+  .emptyContainer {
+    padding: 20px;
+    text-align: center;
+    
+    p {
+      font-size: var.$font-size-md;
+    };
+
+    button {
+      margin-top: 10px;
+      min-width: 130px;
+      height: 40px;
+      color: #fff;
+      padding: 5px 10px;
+      font-weight: bold;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      position: relative;
+      display: inline-block;
+      outline: none;
+      border-radius: 5px;
+      border: 2px solid #2c0b8e;
+      background: #2c0b8e;
+    }
+    button:hover {
+      background: #fff;
+      color: #2c0b8e
+    }
+  }
+
+};

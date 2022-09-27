@@ -1,6 +1,6 @@
 .cartContainer {  
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-columns: 1fr 1fr 0.5fr;
   grid-template-rows: 1fr;
   grid-auto-flow: column;
   grid-template-areas:
@@ -9,18 +9,8 @@
   min-height: 100px;
   margin: 50px auto;
   gap: 10px;
-}
+};
 
-.cartContent { 
-  grid-area: cartContent;
-  width: 100%;
-  background-color: white;
-  border-radius: 10px;
-}
 
-.cartTotals { 
-  grid-area: cartTotals; 
-  width: 100%;
-  background-color: blue;
-  border-radius: 10px;
-}
+
+

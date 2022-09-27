@@ -20,7 +20,6 @@ const ItemDetailContainer = () => {
         const docSnap = await getDoc(docRef);
 
         if (docSnap.exists()) {
-          console.log("Document data:", docSnap.data());
           setProductDetail({id: docSnap.id, ...docSnap.data()});
         } else {
           // doc.data() will be undefined in this case
@@ -35,8 +34,6 @@ const ItemDetailContainer = () => {
     getProducts();
 
   }, [productId]);
-
-  console.log(productDetail);
 
   return <ItemDetail product={productDetail}/>
 }

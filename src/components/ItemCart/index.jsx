@@ -11,14 +11,19 @@ const ItemCart = ({product}) => {
     <div className={styles.cartContent}>
       <img className={styles.productImage} width="130px" height="130px" src={product.image} alt=""/>
       <dl className={styles.title}>
-        <dt>{product.title}</dt>
+        <dt>Nombre</dt>
+        <dd>{product.title}</dd>
       </dl>
       <dl className={styles.price}>
-        <dt>{product.price}€</dt>
+        <dt>Subtotal</dt>
+        <dd>{product.price * product.quantity}€</dd>
+        
       </dl>
       <dl className={styles.quantity}>
-        <dt>{product.quantity}</dt>
+        <dt>Cantidad</dt>
+        <dd>{product.quantity}</dd>
       </dl>
+      <button className={styles.button} onClick={()=> removeItem(product)}>X</button>
     </div>
   )
 }
