@@ -4,9 +4,9 @@
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  font-size: var.$font-size-xl;
+  font-size: var.$font-size-md;
   width: 300px;
-  height: 400px;
+  height: 420px;
   border: 1px solid black;
   border-radius: 10px;
   box-shadow: 0 2px 5px rgb(0 0 0 / 50%);
@@ -18,8 +18,8 @@
     height: 220px;
     object-fit: contain;
     background-color: white;
+    margin-bottom: 10px;
   }
-
 
   .cardBody {
     height: 40%;

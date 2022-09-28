@@ -33,7 +33,7 @@ const ItemDetail = ({product}) => {
       <div className={styles.detailsContainer}>
         <h3>{product.title}</h3>
         <p>{product.description}.</p>
-        <p>Precio: {product.price}€</p>
+        <p>Precio: {product.price ? (product.price).toFixed(2) : 0}€</p>
         <div className={styles.countContainer}>
           {!qty 
           ? <ItemCount initial={1} stock={product.stock} onAdd={toCart}/> 

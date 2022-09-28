@@ -5,9 +5,10 @@ import NotFound from "./components/NotFound";
 import Cart from "./containers/CartContainer";
 import ItemDetailContainer from "./containers/ItemDetailContainer";
 import ItemListContainer from "./containers/ItemListContainer";
-import CartContext from "./context/CartContext"
+import CartContext from "./context/CartContext";
 
 function App() {
+
   return (
     <CartContext>
       <BrowserRouter>
