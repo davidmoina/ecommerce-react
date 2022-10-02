@@ -11,14 +11,12 @@ const CartWidget = () => {
   return (
     <div className={styles.widgetContainer}>
       <FaShoppingCart/>
-      {totalProducts() !== 0 
-      ? <div className={styles.productsInCart}>
+      {totalProducts() !== 0 && 
+        <div className={styles.productsInCart}>
           {totalProducts()}
-        </div>
-      : ""}
-      
+        </div>}
     </div>
   )
 }
 
-export default CartWidget
+export default CartWidget;

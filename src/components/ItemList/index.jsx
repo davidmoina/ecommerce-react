@@ -8,13 +8,9 @@ import LinearProgress from '@mui/material/LinearProgress';
 const ItemList = ({products}) => {
   return (
     <div className={styles.container}>
-      {products.length 
-      ? products.map(product => {
+      {products.map(product => {
         return <Item key={product.id} product={product}/>
-      })
-      : <Box sx={{ width: '100%' }}>
-          <LinearProgress />
-        </Box>}
+      })}
     </div>
   )
 }

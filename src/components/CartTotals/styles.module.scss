@@ -2,6 +2,11 @@
 
 .cartTotals { 
   grid-area: cartTotals; 
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
   width: 100%;
   max-height: 250px;
   padding: 20px;
@@ -10,6 +15,27 @@
   font-size: var.$font-size-md;
 
   p {
-    text-align: center
+    text-align: center;
+    font-weight: 500;
+  }
+
+  .confirmButton {
+    width: 140px;
+    height: 40px;
+    color: #fff;
+    padding: 5px 10px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    position: relative;
+    display: inline-block;
+    outline: none;
+    border-radius: 5px;
+    border: 2px solid #57cc99;
+    background: #57cc99;
+  }
+  .confirmButton:hover {
+    background: #fff;
+    color: #57cc99
   }
 };

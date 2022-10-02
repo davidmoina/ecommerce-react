@@ -29,11 +29,7 @@ const CartItems = () => {
               return <ItemCart key={product.id} product={product}/>
             })
         }
-        {
-          !cart.length
-          ? ""
-          : <ButtonsCartItems/>
-        }
+        {cart.length > 0 && <ButtonsCartItems/>}
       </section>
   )
 }
