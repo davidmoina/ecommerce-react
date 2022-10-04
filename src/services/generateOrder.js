@@ -1,9 +1,17 @@
-const generateOrder = (name, email, phone, cart, total) => {
+const generateOrder = (name, surname, email, phone, country, address, information, postcode, city, terms, newsletter, cart, total) => {
   return {
     buyer: {
         name,
+        surname,
         email,
-        phone
+        phone,
+        country,
+        address,
+        information,
+        postcode,
+        city,
+        terms,
+        newsletter
     },
     items: cart,
     total,

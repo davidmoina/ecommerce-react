@@ -1,0 +1,111 @@
+@use '../../scss/abstracts/variables' as var;
+
+.form {
+  width: 60%;
+  max-height: 900px;
+  margin: 20px auto;
+  padding: 30px 80px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: repeat(9, 1fr);
+  gap: 0px 0px;
+  grid-auto-flow: row;
+  grid-template-areas:
+    "h2 h2"
+    "div1 div2"
+    "div3 div3"
+    "div4 div5"
+    "div6 div6"
+    "div7 div7"
+    "div8 div9"
+    "div10 div10"
+    "div11 div11";
+  
+  background-color: var.$color-primario;
+  border-radius: 30px;
+
+  h2 {
+    grid-area: h2;
+    align-self: center;
+    justify-self: center;
+  }
+
+  & > div {
+    display: flex;
+    flex-direction: column;
+    padding: 20px 50px;
+    justify-content: center;
+    gap: 5px;
+
+    input {
+      height: 30px;
+      padding: 0 10px;
+    }
+
+    select {
+      padding: 0 10px;
+      appearance: none;
+      -webkit-appearance: none;
+      -moz-appearance: none;
+      height: 30px;
+      cursor: pointer;
+
+    }
+  }
+
+  div:nth-of-type(1) {
+    grid-area: div1;
+
+  }
+  div:nth-of-type(2) {
+    grid-area: div2;
+  }
+  div:nth-of-type(3) {
+    grid-area: div3;
+  }
+  div:nth-of-type(4) {
+    grid-area: div4;
+  }
+  div:nth-of-type(5) {
+    grid-area: div5;
+  }
+  div:nth-of-type(6) {
+    grid-area: div6;
+  }
+  div:nth-of-type(7) {
+    grid-area: div7;
+  }
+  div:nth-of-type(8) {
+    grid-area: div8;
+  }
+  div:nth-of-type(9) {
+    grid-area: div9;
+  }
+  div:nth-of-type(10) {
+    grid-area: div10;
+  }
+
+  div:nth-of-type(11) {
+    grid-area: div11;
+  }
+
+  .buttonConfirm {
+    width: 140px;
+    height: 40px;
+    color: #fff;
+    padding: 5px 10px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    position: relative;
+    display: inline-block;
+    outline: none;
+    border-radius: 5px;
+    border: 2px solid #57cc99;
+    background: #57cc99;
+  }
+  .buttonConfirm:hover {
+    background: #fff;
+    color: #57cc99
+  }
+}

@@ -2,7 +2,7 @@ import React from 'react';
 import ItemList from '../../components/ItemList';
 import { useParams } from 'react-router-dom';
 import useFirebase from '../../hooks/useFirebase';
-import { LinearProgress } from '@mui/material';
+import CustomLoader from '../../components/CustomLoader';
 
 const ItemListContainer = () => {
 
@@ -13,7 +13,7 @@ const ItemListContainer = () => {
   //retornamos los productos en itemList
   return (
       <>
-        {loading ? <LinearProgress/> : <ItemList products={productos}/>}
+        {loading ? <CustomLoader/> : <ItemList products={productos}/>}
         {error && <h2>{error}</h2>}
       </>
     );
