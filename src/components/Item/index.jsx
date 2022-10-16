@@ -1,13 +1,8 @@
 import React from 'react';
-import ItemCount from '../ItemCount';
 import styles from './styles.module.scss';
 import { useNavigate } from 'react-router-dom';
 
 const Item = ({product}) => {
-
-  const agregarCarrito = (cantidad) => {
-    alert(`Se agrego la cantidad ${cantidad} al carrito`);
-  };
 
   //creamos una variable para usar el hook useNavigate
   const navigate = useNavigate();
@@ -25,7 +20,6 @@ const Item = ({product}) => {
       <div className={styles.cardBody}>
         <h6 className={styles.titleProduct}>{product.title}</h6>
         <p className={styles.price}>{(product.price).toFixed(2)}€</p>
-        <ItemCount initial={1} stock={product.stock} onAdd={agregarCarrito}/>
       </div>
   </div>
   )

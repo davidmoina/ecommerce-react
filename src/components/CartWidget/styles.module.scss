@@ -3,6 +3,7 @@
 .widgetContainer {
   display: flex;
   color: var.$color-oscuro;
+  font-size: var.$font-size-xxl;
 
   .productsInCart {
     position: absolute;

@@ -1,19 +1,21 @@
 import React from 'react';
 import { useContext } from 'react';
-import {FaShoppingCart} from 'react-icons/fa'
 import { Shop } from '../../context/CartContext';
 import styles from './styles.module.scss';
+import ShoppingCartIcon from '@mui/icons-material/ShoppingCart';
 
 const CartWidget = () => {
 
   const {totalProducts} = useContext(Shop);
 
+  const total =  totalProducts();
+
   return (
     <div className={styles.widgetContainer}>
-      <FaShoppingCart/>
-      {totalProducts() !== 0 && 
+      <ShoppingCartIcon fontSize='inherit'/>
+      {total !== 0 && 
         <div className={styles.productsInCart}>
-          {totalProducts()}
+          {total}
         </div>}
     </div>
   )

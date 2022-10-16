@@ -21,6 +21,6 @@ const Routing = () => {
         </Routes>
       </BrowserRouter>
   )
-}
+};
 
 export default Routing;

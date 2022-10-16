@@ -12,7 +12,7 @@ const ItemCount = ({stock, initial, onAdd}) => {
     } else {
       alert("No tenemos stock suficiente");
     }
-  }
+  };
 
   const restProduct = () => {
     if(add > 1) {
@@ -20,7 +20,7 @@ const ItemCount = ({stock, initial, onAdd}) => {
     } else {
       alert("no puedes seleccionar menos de 1")
     }
-  }
+  };
 
   const addCart = () => {
     onAdd(add);
@@ -39,4 +39,4 @@ const ItemCount = ({stock, initial, onAdd}) => {
   )
 }
 
-export default ItemCount
+export default ItemCount;
